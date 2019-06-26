@@ -184,7 +184,7 @@ Steps to run the app in a docker container :
   4. Stop the server using cmd: $ docker-compose down
 
 ## Documentation
-The API documentation is written in Swagger (https://github.com/swagger-api/swagger-node#readme).
+The API documentation is written in [Swagger](https://github.com/swagger-api/swagger-node#readme).
 
 To view swagger API documentation
 
