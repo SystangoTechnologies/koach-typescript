@@ -35,15 +35,15 @@ To simulate environment variables
 The environment variables are as follows -
 ```
 NODE_ENV=production                        // Environment development/production
-SERVER_PORT_NUMBER=3000             // Server's Port
-SESSION=secret_key                             // secret-boilerplate-token
-JWT_SECRET=token                              // Jwt secret key
-DB_HOST=host 									// DB Host address
-DB_PORT=3306								    // DB Port number
-DB_DIALECT= db								  // DB (mysql, PostgreSQL, MySQL, etc)
-DB_NAME=name                       		  // DB name
-DB_USER=user				                     // DB user name
-DB_PASSWORD=password				 // DB password
+SERVER_PORT_NUMBER=3000                    // Server's Port
+SESSION=secret_key                         // secret-boilerplate-token
+JWT_SECRET=token                           // Jwt secret key
+DB_HOST=host 			           // DB Host address
+DB_PORT=3306				   // DB Port number
+DB_DIALECT= db				   // DB (mysql, PostgreSQL, MySQL, etc)
+DB_NAME=name                               // DB name
+DB_USER=user				   // DB user name
+DB_PASSWORD=password		           // DB password
 ```
 
 ## Installation
@@ -74,77 +74,77 @@ git clone https://github.com/SystangoTechnologies/Koach-Typescript.git
 
 ## Structure
 ```
-|   .gitignore              		    // Standard git ignore file
-│   .env                    		     // dotenv configuration file for environment variable
-│   docker-compose.yml      // Standard docker compose file 
+|   .gitignore              		   // Standard git ignore file
+│   .env                    		   // dotenv configuration file for environment variable
+│   docker-compose.yml      		   // Standard docker compose file 
 │   Dockerfile            		   // Standard docker file
-│   gulpfile.js      				  // Standard  gulpfile.js file
-│   package.json        		  // Standard package.json file
-│   tsconfig.json      		    // Standard tsconfig.json file
-│   tslint.json      				 // Standard tslint.json file
+│   gulpfile.js      			   // Standard  gulpfile.js file
+│   package.json        		   // Standard package.json file
+│   tsconfig.json      		           // Standard tsconfig.json file
+│   tslint.json      		           // Standard tslint.json file
 │
-├───cert      					 // SSL certificates
+├───cert      				   // SSL certificates
 │       localhost.crt
 │       localhost.key
 │
-├───logs     						  // logs directory
-├───src     						   // source code
+├───logs     				   // logs directory
+├───src     				   // source code
 │   │   .sequelizerc     		   // Standarded sequlize config file
 │   │
 │   ├───app
-│   │   ├───api     					         // APIs
-│   │   │   │   RouterGenerator.ts  	// Generating all routes
+│   │   ├───api     			   // APIs
+│   │   │   │   RouterGenerator.ts  	   // Generating all routes
 │   │   │   │
 │   │   │   ├───common
 │   │   │   │   │   index.ts 
 │   │   │   │   │
 │   │   │   │   └───home
-│   │   │   │           controller.ts 	      // Controller
-│   │   │   │           router.ts 		       // Router
+│   │   │   │           controller.ts 	    // Controller
+│   │   │   │           router.ts 	    // Router
 │   │   │   │
-│   │   │   ├───v1   						   // Version 1 of APIs  
+│   │   │   ├───v1   			    // Version 1 of APIs  
 │   │   │   │       index.ts
 │   │   │   │
-│   │   │   └───v2							  // Version 2 of APIs  
+│   │   │   └───v2			    // Version 2 of APIs  
 │   │   │           index.ts
 │   │   │
-│   │   ├───core 							   // Dependency Files .
-│   │   │       RouterManager.ts		  // Route depedency
+│   │   ├───core 			    // Dependency Files .
+│   │   │       RouterManager.ts	    // Route depedency
 │   │   │
 │   │   ├───db
 │   │   │   │   DatabaseConfigurationManager.ts			// Database Config
 │   │   │   │
-│   │   │   ├───migrations 											// Migrations .
+│   │   │   ├───migrations 					// Migrations .
 │   │   │   │   │   20190624110733-create-user.ts
 │   │   │   │   │
-│   │   │   │   └───compiled 										// compiled migrations
+│   │   │   │   └───compiled 					// compiled migrations
 │   │   │   │           20190624100830-create-student.js
 │   │   │   │
-│   │   │   ├───models 												   // Models 
-│   │   │   │       index.ts 												  // Loads models
-│   │   │   │       student.ts											   // Student model
+│   │   │   ├───models 						// Models 
+│   │   │   │       index.ts 					// Loads models
+│   │   │   │       student.ts					// Student model
 │   │   │   │
 │   │   │   └───seeders
-│   │   ├───middleware 												// Middlewares.
+│   │   ├───middleware 						// Middlewares
 │   │   │       index.ts
 │   │   │
-│   │   ├───service 														// Service file for database
-│   │   └───utils 															 // utility files
+│   │   ├───service						// Service file for database
+│   │   └───utils      	 					// utility files
 │   ├───config
 │   │   │   config.json
-│   │   │   ConfigurationManager.ts 								//  configuration setting
+│   │   │   ConfigurationManager.ts 				//  configuration setting
 │   │   │   index.ts
 │   │   │
 │   │   └───env // Environments config
-│   │           common.ts 													// common varibles
-│   │           development.ts 											 // development variables.
+│   │           common.ts 					// common varibles
+│   │           development.ts 					// development variables.
 │   │
-│   ├───logger 																// logger file.
+│   ├───logger 							// logger directory
 │   ├───server
-│   │       server.ts 															// server
+│   │       server.ts 						// server
 │   │
-│   └───testcases 														  // Test cases
-├───swagger 																// Swagger documentation
+│   └───testcases 						// Test cases
+├───swagger 							// Swagger documentation
 │       favicon-16x16.png
 │       favicon-32x32.png
 │       index.html
@@ -160,10 +160,10 @@ git clone https://github.com/SystangoTechnologies/Koach-Typescript.git
 │       swagger.json
 │       swagger.yaml
 │
-└───tasks 																		// Gulp task
-        nodemon.js
-        trranspile.js
-		yaml2json.js
+└───tasks 							// Gulp task
+ ├─── nodemon.js
+ ├─── transpiler.js
+ └─── yaml2json.js
 ```
 
 
