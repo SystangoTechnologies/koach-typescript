@@ -145,7 +145,7 @@ git clone https://github.com/SystangoTechnologies/Koach-Typescript.git
     │	│      localhost.crt
     │	│      localhost.key
     │	│       
-        └───swagger                                 // Swagger
+    │   └───swagger                                 // Swagger
     │
     └───server                                      // server
            server.ts
