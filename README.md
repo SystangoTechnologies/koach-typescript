@@ -79,77 +79,76 @@ git clone https://github.com/SystangoTechnologies/Koach-Typescript.git
 │   README.md
 │   tslint.json                                     // Standard tslint.json file
 │
-├───cert                                            // SSL certificates
-│       localhost.crt
-│       localhost.key
-│
 ├───log                                             // logs directory
-├───src                                             // source code
-│   │   .sequelizerc                                // Standarded sequlize config file
-│   │
-│   ├───app
-│   │   ├───constant                                // constants
-│   │   │       httpConstants.ts                    // http status code constant file
-│   │   │
-│   │   ├───controller                              // controller
-│   │   │       BookController.ts
-│   │   │
-│   │   ├───core
-│   │   │   │   RouterGenerator.ts                  // Generating all routes
-│   │   │   │   RouterManager.ts                    // Route depedency
-│   │   │   │
-│   │   │   └───middleware                          // middlewares
-│   │   │           ErrorMiddleware.ts 
-│   │   │           RequestValidator.ts             // request body validator
-│   │   │
-│   │   ├───db
-│   │   │   │   config.json
-│   │   │   │   DatabaseConfigurationManager.ts
-│   │   │   │
-│   │   │   ├───entity                              // entities
-│   │   │   |   ├───library
-│   │   │   |   │       book.ts                     // book entity
-│   │   │   |   │       index.ts
-│   │   │   |   │
-            |   |
-│   │   │   |   └───migrations                      // Migrations
-│   │   │   |       │   20190703135002-create-book.ts
-│   │   │   |       │
-│   │   │   |       └───compiled                    // compiled migrations
-│   │   │   |               20190703135002-create-book.js       
-│   │   │   |
-│   │   │   |
-│   │   │   ├───repository                          // repository
-│   │   │       └───Book.ts        
-│   │   │   
-│   │   ├───model
-│   │   │       Book.ts                             // book model
-│   │   │ 
-│   │   ├───routes                                  // router
-│   │   │       BookRouter.ts
-│   │   │       index.ts
-│   │   │
-│   │   ├───service                                 // Service file for database
-│   │   │       BookService.ts
-│   │   │
-│   │   └───validation                              // validations
-│   │           BookValidator.ts
-│   │
-│   ├───logger                                      // logger file.
-│   │       index.ts
-│   │       LogManager.ts
-│   │
-│   ├───resources                                   // resources
-│   │   └───config                                  //  configuration setting
-│   │           ConfigurationManager.ts
-│   │           env.common.ts
-│   │           env.development.ts
-│   │           index.ts
-│   │
-│   └───server                                      // server
-│           server.ts
-│
-└───swagger                                         // swagger
+└───src                                             // source code
+    │   .sequelizerc                                // Standarded sequlize config file
+    │
+    ├───app
+    │   ├───constant                                // constants
+    │   │       httpConstants.ts                    // http status code constant file
+    │   │
+    │   ├───controller                              // controller
+    │   │       BookController.ts
+    │   │
+    │   ├───core
+    │   │   │   RouterGenerator.ts                  // Generating all routes
+    │   │   │   RouterManager.ts                    // Route depedency
+    │   │   │
+    │   │   └───middleware                          // middlewares
+    │   │           ErrorMiddleware.ts 
+    │   │           RequestValidator.ts             // request body validator
+    │   │
+    │   ├───db
+    │   │   │   config.json
+    │   │   │   DatabaseConfigurationManager.ts
+    │   │   │
+    │   │   ├───entity                              // entities
+    │   │   |   ├───library
+    │   │   |   │       book.ts                     // book entity
+    │   │   |   │       index.ts
+    │   │   |   │
+    │   │   |   └───migrations                      // Migrations
+    │   │   |       │   20190703135002-create-book.ts
+    │   │   |       │
+    │   │   |       └───compiled                    // compiled migrations
+    │   │   |               20190703135002-create-book.js       
+    │   │   |
+    │   │   |
+    │   │   └───repository                          // repository
+    │   │          Book.ts        
+    │   │   
+    │   ├───model
+    │   │       Book.ts                             // book model
+    │   │ 
+    │   ├───routes                                  // router
+    │   │       BookRouter.ts
+    │   │       index.ts
+    │   │
+    │   ├───service                                 // Service file for database
+    │   │       BookService.ts
+    │   │
+    │   └───validation                              // validations
+    │           BookValidator.ts
+    │
+    ├───logger                                      // logger file.
+    │      index.ts
+    │      LogManager.ts
+    │
+    ├───resources                                   // resources
+    │   ├───config                                  //  configuration setting
+    │   │       ConfigurationManager.ts
+    │   │       env.common.ts
+    │   │       env.development.ts
+    │   │       index.ts
+    │   │
+    │	  ├───cert                                    // SSL certificates
+    │	  │      localhost.crt
+    │	  │      localhost.key
+    │	  │       
+   	│	  └───swagger                                 // Swagger
+    │
+    └───server                                      // server
+           server.ts
 ```
 
 
