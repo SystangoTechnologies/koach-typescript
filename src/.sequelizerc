@@ -1,0 +1,10 @@
+'use strict';
+
+const path = require('path');
+
+module.exports = {
+  config: path.join(__dirname, 'app/db/config.json'),
+  'migrations-source-path': path.join(__dirname, 'app/db/migrations'),
+  'migrations-compiled-path': path.join(__dirname, 'app/db/migrations/compiled'),
+  'models-path': path.join(__dirname, 'app/db/entity/library'),
+};

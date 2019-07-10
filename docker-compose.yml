@@ -1,0 +1,20 @@
+version: '2'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/src/app
+    environment:
+      - SERVER_PORT=${SERVER_PORT}
+      - SESSION=${SESSION}
+      - TOKEN=${TOKEN}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_DIALECT=${DB_DIALECT}
+      
+    command: forever dist/server/server.js

@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "library",
+    "host": "192.168.1.39",
+    "port": "3306",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "library",
+    "host": "192.168.1.39",
+    "port": "3306",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "root",
+    "database": "library",
+    "host": "192.168.1.39",
+    "port": "3306",
+    "dialect": "mysql"
+  }
+}

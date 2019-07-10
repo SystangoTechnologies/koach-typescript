@@ -1,0 +1,158 @@
+---
+swagger: '2.0'
+info:
+  description: This is typescript boilerplate's API specification.
+  version: 1.0.0
+  title: TypeScript Boilerplate
+host: localhost:3000
+basePath: "/api"
+schemes:
+- https
+tags:
+  - name: Books
+    description: Books related API
+securityDefinitions:
+  Bearer:
+    description: Example value:- Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MmQwMGJhNTJjYjJjM
+    type: apiKey
+    name: Authorization
+    in: header
+paths:
+  "/v1/books/{id}":
+    get:
+      tags:
+      - Books
+      summary: Get Book API
+      description: Get Book API
+      operationId: getBookById
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: integer
+        description: 'Book Id'
+      responses:
+        '200':
+          description: Book Information
+          schema:
+            "$ref": "#/definitions/bookInformation"
+        '500':
+          description: Something went wrong
+
+    put:
+      tags:
+      - Books
+      summary: Update Book API
+      description: Update Book API
+      operationId: updateBook
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: integer
+        description: 'Book Id'
+      - name: 'Book Information'
+        in : body
+        description: 'Book Details'
+        schema:
+          "$ref": "#/definitions/bookInformation"
+      responses:
+        '200':
+          description: book updated Successfully
+        '500':
+          description: Something went wrong
+    
+    delete:
+      tags:
+      - Books
+      summary: Delete Book API
+      description: Delete Book API
+      operationId: deleteBook
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: integer
+        description: 'Book Id'
+      responses:
+        '204':
+          description: Book Deleted Successfully
+        '500':
+          description: Something went wrong
+ 
+  "/v1/books/":
+    get:
+      tags:
+      - Books
+      summary: Get All Book API
+      description: Get All Book API
+      operationId: getAllBooks
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: All Books Information
+          schema:
+            "$ref": "#/definitions/AllBooksInformations"
+        '500':
+          description: Something went wrong
+    post:
+      tags:
+      - Books
+      summary: Add Book API
+      description: Add Book API
+      operationId: addBook
+      produces:
+      - application/json
+      parameters:
+      - name: 'Book Information'
+        in : body
+        description: 'Book Details'
+        schema:
+          "$ref": "#/definitions/bookInformation"
+      responses:
+        '201':
+          description: Book Added Successfully
+        '500':
+          description: Something went wrong
+
+definitions:
+  bookInformation:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      authorName:
+        type: string
+      category:
+        type: string
+      price:
+        type: number
+      totalPage:
+        type: integer
+
+  AllBooksInformations:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        authorName:
+          type: string
+        category:
+          type: string
+        price:
+          type: number
+        totalPage:
+          type: integer
