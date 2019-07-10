@@ -17,8 +17,8 @@ const app: Koa = new Koa()
 
 // Loading certificates
 const options: http2.SecureServerOptions = {
-    cert: fs.readFileSync(`${process.cwd()}/cert/localhost.crt`),
-    key: fs.readFileSync(`${process.cwd()}/cert/localhost.key`)
+    cert: fs.readFileSync(`${process.cwd()}/src/resources/cert/localhost.crt`),
+    key: fs.readFileSync(`${process.cwd()}/src/resources/cert/localhost.key`)
 }
 
 const _use: Function = app.use
@@ -35,7 +35,7 @@ routes(app)
 
 // show swagger only if the NODE_ENV is development and stagging
 if (['development', 'staging'].includes(config.environment)) {
-    app.use(mount('/swagger', serve(`${process.cwd()}/swagger`)))
+    app.use(mount('/swagger', serve(`${process.cwd()}/src/resources/swagger`)))
 }
 
 
