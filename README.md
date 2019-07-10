@@ -141,11 +141,11 @@ git clone https://github.com/SystangoTechnologies/Koach-Typescript.git
     │   │       env.development.ts
     │   │       index.ts
     │   │
-    │	  ├───cert                                    // SSL certificates
-    │	  │      localhost.crt
-    │	  │      localhost.key
-    │	  │       
-   	│	  └───swagger                                 // Swagger
+    │	├───cert                                    // SSL certificates
+    │	│      localhost.crt
+    │	│      localhost.key
+    │	│       
+        └───swagger                                 // Swagger
     │
     └───server                                      // server
            server.ts
