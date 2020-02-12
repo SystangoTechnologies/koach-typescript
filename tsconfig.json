@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "module": "commonjs",
+        "target": "ES6",
+        "outDir": "dist",
+        "rootDir": "src",
+        "sourceMap": false,
+        "listFiles": false,
+        "esModuleInterop": true,
+        "experimentalDecorators": true
+    },
+    "exclude": [
+        "node_modules",
+        "tasks",
+        "dist",
+        "gulpfile.js",
+        "src/resources/swagger",
+        "src/app/test",
+        "testcases"
+    ]
+}
