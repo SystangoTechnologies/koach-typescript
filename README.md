@@ -178,9 +178,7 @@ Visit [https://localhost:3000/swagger](https://localhost:3000/swagger) to view S
 
 ## Contributors
 
-[Abhishek Parmar](https://www.linkedin.com/in/abhishek-parmar-19a875122/)
-
-[Anurag Vikram Singh](https://www.linkedin.com/in/anuragvikramsingh/)
+[Sparsh Pipley](https://www.linkedin.com/in/sparsh-pipley-6ab0b1a4/)
 
 ## License
 MIT.
