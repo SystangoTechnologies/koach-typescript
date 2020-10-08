@@ -32,6 +32,29 @@ module.exports = function (grunt) {
                 }
             }
         },
+        yaml: {
+            your_target: {
+                options: {
+                    ignored: /^_/,
+                    space: 4,
+                    customTypes: {
+                        '!include scalar': function (value, yamlLoader) {
+                            return yamlLoader(value);
+                        },
+                        '!max sequence': function (values) {
+                            return Math.max.apply(null, values);
+                        },
+                        '!extend mapping': function (value, yamlLoader) {
+                            return _.extend(yamlLoader(value.basePath), value.partial);
+                        }
+                    }
+                },
+                files: [
+                    { expand: true, cwd: './src/resources/swagger', src: ['**/*.yaml'], dest: './src/resources/swagger' }
+                ]
+            },
+        },
+
         // Watch file changes and reboot the server
         watch: {
             ts: {
@@ -61,6 +84,7 @@ module.exports = function (grunt) {
     });
 
     // Load NPM Tasks
+    grunt.loadNpmTasks("grunt-yaml")
     grunt.loadNpmTasks("grunt-contrib-copy")
     grunt.loadNpmTasks("grunt-contrib-watch")
     grunt.loadNpmTasks("grunt-ts")
@@ -70,11 +94,13 @@ module.exports = function (grunt) {
     grunt.registerTask("default", [
         "ts",
         "copy",
+        "yaml",
         "concurrent:concurrent_tasks"
     ]);
 
     grunt.registerTask("build", [
         "ts",
-        "copy"
+        "copy",
+        "yaml"
     ]);
 };
