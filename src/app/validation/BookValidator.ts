@@ -32,19 +32,19 @@ export class BookValidator {
             status: httpConstants.HTTP_SUCCESS_OK,
             data: {}
         }
-        let validation = requestValidator.checkRequestBody(ctx, ['name', 'author_name', 'category', 'price', 'total_page'])
+        let validation = requestValidator.checkRequestBody(ctx, ['name', 'authorName', 'category', 'price', 'totalPage'])
         if (validation.fail) {
-            response.isValid = false,
-                response.status = httpConstants.HTTP_BAD_REQUEST
+            response.isValid = false
+            response.status = httpConstants.HTTP_BAD_REQUEST
             response.data['error'] = validation.msg
             return response
         }
 
         let name = ctx.request.body.name
-        let authorName = ctx.request.body.author_name
+        let authorName = ctx.request.body.authorName
         let category = ctx.request.body.category
         let price = ctx.request.body.price
-        let totalPage = ctx.request.body.total_page
+        let totalPage = ctx.request.body.totalPage
 
         if (typeof name !== 'string') {
             response.isValid = false
