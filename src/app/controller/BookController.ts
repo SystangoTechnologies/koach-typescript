@@ -1,9 +1,10 @@
 import { Context } from 'koa'
 import logger from '../../logger'
-import httpConstants from '../constant/httpConstants'
+import httpConstants from '../constant/HttpConstants'
 import bookService from '../service/BookService'
-import bookValidator from '../validation/BookValidator'
+import bookValidator from '../validation/custom/BookValidator'
 import { Book } from '../model/Book'
+import apiErrorHandler from '../utils/ApiErrorHandler'
 
 
 class BookController {
@@ -25,11 +26,10 @@ class BookController {
 
             ctx.status = httpConstants.HTTP_SUCCESS_OK
             ctx.body = book
-        } catch (err) {
-            ctx.status = httpConstants.HTTP_INTERNAL_SERVER_ERROR
-            ctx.body = { error: err.message }
+        } catch (error) {
+            apiErrorHandler.errorHandler(error, ctx);
 
-            logger.error(`Controller : getBook, Error : ${JSON.stringify(err)}`)
+            logger.error(`Controller : getBook, Error : ${JSON.stringify(error)}`)
         }
     }
 
@@ -40,11 +40,10 @@ class BookController {
             ctx.status = httpConstants.HTTP_SUCCESS_OK
             ctx.body = books
             logger.info(`Controller : getAllBooks, Response-Body : ${JSON.stringify(ctx.body)}`)
-        } catch (err) {
-            ctx.status = httpConstants.HTTP_INTERNAL_SERVER_ERROR
-            ctx.body = { error: err.message }
+        } catch (error) {
+            apiErrorHandler.errorHandler(error, ctx);
 
-            logger.error(`Controller : getAllBooks, Error : ${JSON.stringify(err)}`)
+            logger.error(`Controller : getAllBooks, Error : ${JSON.stringify(error)}`)
         }
     }
 
@@ -63,11 +62,10 @@ class BookController {
             await bookService.addBook(ctx)
 
             ctx.status = httpConstants.HTTP_CREATED
-        } catch (err) {
-            ctx.status = httpConstants.HTTP_INTERNAL_SERVER_ERROR
-            ctx.body = { error: err.message }
+        } catch (error) {
+            apiErrorHandler.errorHandler(error, ctx);
 
-            logger.error(`Controller : addBook, Error : ${JSON.stringify(err)}`)
+            logger.error(`Controller : addBook, Error : ${JSON.stringify(error)}`)
         }
     }
 
@@ -93,11 +91,10 @@ class BookController {
             } else {
                 ctx.status = httpConstants.HTTP_SUCCESS_OK
             }
-        } catch (err) {
-            ctx.status = httpConstants.HTTP_INTERNAL_SERVER_ERROR
-            ctx.body = { error: err.message }
+        } catch (error) {
+            apiErrorHandler.errorHandler(error, ctx);
 
-            logger.error(`Controller : updateBook, Error : ${JSON.stringify(err)}`)
+            logger.error(`Controller : updateBook, Error : ${JSON.stringify(error)}`)
         }
     }
 
@@ -118,11 +115,10 @@ class BookController {
             await bookService.deleteBook(ctx)
 
             ctx.status = httpConstants.HTTP_NO_CONTENT
-        } catch (err) {
-            ctx.status = httpConstants.HTTP_INTERNAL_SERVER_ERROR
-            ctx.body = { error: err.message }
+        } catch (error) {
+            apiErrorHandler.errorHandler(error, ctx);
 
-            logger.error(`Controller : deleteBook, Error : ${JSON.stringify(err)}`)
+            logger.error(`Controller : deleteBook, Error : ${JSON.stringify(error)}`)
         }
     }
 

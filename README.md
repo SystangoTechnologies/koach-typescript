@@ -180,5 +180,11 @@ Visit [https://localhost:3000/swagger](https://localhost:3000/swagger) to view S
 
 [Sparsh Pipley](https://www.linkedin.com/in/sparsh-pipley-6ab0b1a4/)
 
+[Anurag Vikram Singh](https://www.linkedin.com/in/anuragvikramsingh/)
+
+[Abhishek Parmar](https://www.linkedin.com/in/abhishek-parmar-19a875122/)
+
+[Ayush Sharma](https://www.linkedin.com/in/ayush-sharma-40a520149)
+
 ## License
 MIT.
