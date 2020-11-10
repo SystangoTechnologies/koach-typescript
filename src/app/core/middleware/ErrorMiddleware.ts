@@ -1,6 +1,6 @@
 import { Context } from "koa";
 import { decode } from 'jsonwebtoken'
-import httpConstants from '../../constant/httpConstants'
+import httpConstants from '../../constant/HttpConstants'
 import models from '../../db/entity/library'
 
 class ErrorMiddleware {
