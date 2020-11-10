@@ -45,6 +45,7 @@
     "@types/sequelize": "^4.28.9",
     "@types/winston": "^2.4.4",
     "grunt-yaml": "^0.4.2",
+    "joi": "^17.2.1",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
