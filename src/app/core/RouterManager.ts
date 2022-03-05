@@ -36,7 +36,7 @@ export class RouterManager {
 
     // patch route
     patch(route: string | RegExp, ...handlers: Array<Middleware<any>>) {
-        this.router.options(route, ...handlers)
+        this.router.patch(route, ...handlers)
     }
 
 
