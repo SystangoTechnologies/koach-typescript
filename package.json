@@ -46,7 +46,7 @@
     "@types/winston": "^2.4.4",
     "grunt-yaml": "^0.4.2",
     "joi": "^17.2.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-convert": "^2.0.0",
