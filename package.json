@@ -58,7 +58,7 @@
     "koa-router": "9.4.0",
     "koa-static": "^5.0.0",
     "mysql2": "2.2.5",
-    "sequelize": "^5.21.3",
+    "sequelize": "^6.29.0",
     "ts-node": "9.0.0",
     "tsc": "^1.20150623.0",
     "winston": "^3.2.1",
